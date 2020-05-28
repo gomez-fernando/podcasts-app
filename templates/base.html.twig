@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,
 																																							            shrink-to-fit=no">
 		<title>
-			{% block title %}Linux World
+			{% block title %}Mega Podcasts
 			{% endblock %}
 		</title>
 		<link rel="shortcut icon" type="image/jpg" href="{{ asset('img/logo.jpg') }}">
@@ -82,6 +82,27 @@
 			<script src="{{ asset('js/jquery.min.js') }}"></script>
 			<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 		{% endblock %}
+
+
+		if(window.location.href.indexOf("/home/") > -1) {
+		url = window.location.href;
+		n = url.substr(url.length - 1);
+		$('.header-02 .nav-item:nth-child('+n+')').find('.nav-link').addClass('selected');
+		// Title con el nombre de la categoria
+		title = $('.header-02 .nav-link.selected').text();
+		document.title=title;
+		}
+
+		<script>
+			$(document).ready(function(){
+				var anterior = $("body").html().replace('Previous','Anterior');
+				$("body").html(anterior);
+
+				var siguiente = $("body").html().replace('Next','Siguiente');
+				$("body").html(siguiente);
+
+			});
+		</script>
 	</body>
 
 </html>
