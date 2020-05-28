@@ -106,7 +106,7 @@ class PostsController extends AbstractController
                         $newFilename
                     );
                 } catch (FileException $e) {
-                    throw new \Exception('Ups! ha ocurrido un error, sorry :cdfdf');
+                    throw new \Exception('Ups! ha ocurrido un error, sorry :c');
                 }
                 $post->setFoto($newFilename);
             }
@@ -124,7 +124,7 @@ class PostsController extends AbstractController
                         $newFilename
                     );
                 } catch (FileException $e) {
-                    throw new \Exception('Ups! ha ocurrido un error, sorry :caudio');
+                    throw new \Exception('Ups! ha ocurrido un error, sorry :c');
                 }
                 $post->setAudio($newFilename);
             }
@@ -158,4 +158,6 @@ class PostsController extends AbstractController
 
         return $this->redirectToRoute('dashboard');
     }
+
+
 }
