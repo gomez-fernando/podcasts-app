@@ -46,15 +46,43 @@
 			</div>
 
 		</div>
-
+		<a href="{{ path('editar_podcast', {'id':post.id}) }}" class="btn btn-sm btn-outline-success mr-3">Editar</a>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-{{post.id}}"> Borrar
+		</button>
+		<!-- Modal -->
+		<div class="modal fade" id="modal-{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Confirmación necesaria</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Se eliminará definitivamente este podcast:
+						<strong>{{ post.titulo }}</strong>.<br>
+						¿Desea continuar?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						{# <button type="button" class="btn btn-primary">Save changes</button> #}
+						<a class="btn btn-danger ml-5" href="{{ path('eliminar_podcast', {'id':post.id}) }}">Borrar podcast</a>
+					</div>
+				</div>
+			</div>
 		</div>
 
+		</div>
 	</div>
 
+
+
 	{% endblock %}
-	{% block javascripts %}
-		{{ parent() }}
-		<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
-		<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
-		<script src="{{ asset('js/ajax-call.js') }}"></script>
-	{% endblock %}
+{#	{% block javascripts %}#}
+{#		{{ parent() }}#}
+{#		<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>#}
+{#		<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>#}
+{#		<script src="{{ asset('js/ajax-call.js') }}"></script>#}
+{#	{% endblock %}#}

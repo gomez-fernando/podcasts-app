@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+editar_podcast:
+  path: /editar-podcast/{id}
+  controller: App\Controller\PostsController::editar
+
+eliminar_podcast:
+  path: /borrar-podcast/{id}
+  controller: App\Controller\PostsController::delete

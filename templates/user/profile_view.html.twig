@@ -6,7 +6,9 @@
 {% block body %}
 
     <div class="example-wrapper col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-        <h1 class="mt-2">Editar perfil</h1>
+    <div class="bg-white rounded p-3 my-3">
+
+    <h1 class="mt-2">Editar perfil</h1>
         <form action="{{ path('editarPerfil') }}" method="POST">
             <div class="form-group">
                 <label for="name">Nombre</label>
@@ -28,7 +30,7 @@
                 <input type="password" value="" class="form-control" id="password" aria-describedby="password" name="_password">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary mr-5">Guardar cambios</button>
+                <button type="submit" class="btn btn-primary mr-5 mb-3">Guardar cambios</button>
                 {# <a class="btn btn-danger ml-5" href="{{ path('user_delete') }}">Darse de baja</a> #}
 
                 <!-- Button trigger modal -->
@@ -61,6 +63,6 @@
             </div>
         </form>
 
-
+    </div>
     </div>
 {% endblock %}

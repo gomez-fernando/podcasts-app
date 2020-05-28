@@ -1,34 +1,31 @@
 @font-face {
-  font-family: "signikabold";
-  src: url("../fonts/signika-bold-webfont.woff2") format("woff2"),
-    url("../fonts/signika-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "signikabold";
+    src: url("../fonts/signika-bold-webfont.woff2") format("woff2"), url("../fonts/signika-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "signikaregular";
-  src: url("../fonts/signika-regular-webfont.woff2") format("woff2"),
-    url("../fonts/signika-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "signikaregular";
+    src: url("../fonts/signika-regular-webfont.woff2") format("woff2"), url("../fonts/signika-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "remachine_script_personal_uRg";
-  src: url("../fonts/remachinescript_personal_use-webfont.woff2")
-      format("woff2"),
-    url("../fonts/remachinescript_personal_use-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "remachine_script_personal_uRg";
+    src: url("../fonts/remachinescript_personal_use-webfont.woff2") format("woff2"), url("../fonts/remachinescript_personal_use-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-  background-image: url("../img/UI.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-attachment: fixed;
-  font-family: signikaregular;
+    /* background-image: url("../img/bg.svg"); */
+    background: linear-gradient(rgba(65, 226, 80, 0.5), rgba(65, 226, 80, 0.8)), url("../img/bg.svg");
+    background-repeat: repeat;
+    background-size: 10%;
+    background-attachment: fixed;
+    font-family: signikaregular;
 }
 
 h1,
@@ -37,95 +34,123 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: signikabold;
-  /* color: #f65c78; */
-  /* color: #f65c78; */
-  color: #6bacac;
+    font-family: signikabold;
+    /* color: #f65c78; */
+    /* color: #f65c78; */
+    color: #292d2d;
 }
 
-.container.v-container {
+
+/* .container.v-container {
   min-height: 500px;
-}
+} */
 
 .navbar {
-  /* background-color: #f65c78 !important; */
-  background-color: #6bacac !important;
-  font-family: signikabold;
-  font-size: 1.5em;
-  padding-top: 0;
-  padding-bottom: 0;
+    /* background-color: #f65c78 !important; */
+    background-color: #292d2d !important;
+    font-family: signikabold;
+    font-size: 1.5em;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar-brand {
-  font-family: remachine_script_personal_uRg;
-  font-size: 2em;
-  color: #ffd271 !important;
-  display: flex;
+    font-family: remachine_script_personal_uRg;
+    font-size: 2em;
+    color: #dfdad0 !important;
+    display: flex;
 }
+
 .navbar-brand img {
-  width: 60px;
-  align-self: center;
-  border-radius: 10px;
+    width: 60px;
+    align-self: center;
+    border-radius: 10px;
 }
 
 .nav-link {
-  color: #ffd271 !important;
+    color: #dfdad0 !important;
+}
+
+.navbar-toggler {
+    background-color: #dfdad0;
 }
 
 .fa-user,
 .bg-yellow {
-  color: #ffd271;
-  font-size: 1.3em;
+    color: #dfdad0;
+    font-size: 1.3em;
 }
+
 .fa-clock,
 .bg-green {
-  color: #c3f584;
-  font-size: 1.3em;
+    color: #c3f584;
+    font-size: 1.3em;
 }
 
 .cursor:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .btn-primary {
-  background-color: #4f8080;
-  border-color: #4f8080;
+    background-color: #444848;
+    border-color: #444848;
 }
+
 .btn-primary:hover {
-  background-color: #6aacac;
-  border-color: #6aacac;
+    background-color: #292d2d;
+    border-color: #292d2d;
 }
+
 #navbarSupportedContent {
-  text-align: end;
+    text-align: end;
 }
+
+@media (max-width: 375px) {
+    #navbarSupportedContent {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbarSupportedContent {
+        font-size: 1.2rem;
+    }
+}
+
+.signikabold{
+    font-family: signikabold;
+}
+
 footer {
-  max-width: 100%;
-  background-color: #6bacac;
-  /* font-family: remachine_script_personal_uRg; */
+    max-width: 100%;
+    background-color: #292d2d;
+    /* font-family: remachine_script_personal_uRg; */
 }
+
 .copyright {
-  display: flex;
-  justify-content: center;
-  /* background-color: var(--oscuro); */
-  margin: 0 0 0 0;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    /* background-color: var(--oscuro); */
+    margin: 0 0 0 0;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 
 .copyright a {
-  text-decoration: none;
-  transition: 0.3s ease all;
-  color: #ffd271;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    color: #dfdad0;
 }
 
 .copyright a:visited {
-  color: #ffd271;
+    color: #dfdad0;
 }
 
 .copyright a:hover {
-  text-decoration: none;
-  color: yellow;
-  margin-left: 10px;
-  margin-right: 10px;
-  transform: scale(1.1);
+    text-decoration: none;
+    color: #9ae380;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: scale(1.1);
 }
