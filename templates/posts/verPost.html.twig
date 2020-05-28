@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block title %}Podcast: {{ post.titulo }}
+{% endblock %}
+{% block body %}
+	<div class="container col-md-10 offset-md-1 col-lg-8 offset-lg-2 bg-white rounded my-3 p-4">
+		<div class="row d-flex justify-content-between">
+{#				<span class="p-2 flex-grow-1 bd-highlight">#}
+					<span class="mx-3 font-weight-bold">{{post.titulo}}</span>
+					<span class="mx-3" style="color:#c3f584;">
+{#						<i class="far fa-clock"></i>#}
+						Fecha de publicación:
+							{{ post.fechapublicacion | date('d-m-Y') }}
+{#					</span>#}
+					</span>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="d-flex bd-highlight">
+
+				<div class="text-justify my-3 mx-3">
+					{{ post.descripcion }}
+				</div>
+			</div>
+		</div>
+		<hr>
+
+
+
+		<div class="row justify-content-center">
+					<div class="p-2 bd-highlight my-3">
+						<div class="align-self-center">
+							<img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
+						</div>
+					</div>
+				</div>
+
+
+
+
+		<div class="row justify-content-center">
+			<div class="p-2 bd-highlight my-3">
+				<audio src="{{ asset('uploads/audios/'~post.audio) }}" controls>
+					<p>Tu navegador no implementa el elemento audio</p>
+				</audio>
+			</div>
+
+		</div>
+
+		</div>
+
+	</div>
+
+	{% endblock %}
+	{% block javascripts %}
+		{{ parent() }}
+		<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+		<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+		<script src="{{ asset('js/ajax-call.js') }}"></script>
+	{% endblock %}
