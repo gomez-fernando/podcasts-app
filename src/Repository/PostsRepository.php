@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Posts;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @method Posts|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,14 +20,18 @@ class PostsRepository extends ServiceEntityRepository
         parent::__construct($registry, Posts::class);
     }
 
-    public function buscarTodosLosPosts()
+    public function buscarTodosLosPosts(UserInterface $user)
     {
         return $this->getEntityManager()
                     ->createQuery('
-                        SELECT post.id, post.titulo, post.foto, post.audio, post.fecha_publicacion, user.nombre 
+
+                        SELECT post.id, post.titulo, post.foto, post.audio, post.fecha_publicacion
                         FROM App:Posts post 
-                        JOIN post.user user
+                        WHERE post.user = user
                     ');
+        //                        SELECT post.id, post.titulo, post.foto, post.audio, post.fecha_publicacion, user.nombre
+        //                        JOIN post.user user
+
     }
 
     // /**

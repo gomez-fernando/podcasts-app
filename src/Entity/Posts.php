@@ -34,7 +34,7 @@ class Posts
     /**
      * @ORM\Column(type="datetime")
      */
-    private $fecha_publicacion;
+    public $fecha_publicacion;
 
     /**
      * @ORM\Column(type="string", length=80000)
