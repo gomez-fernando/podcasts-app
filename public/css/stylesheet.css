@@ -40,11 +40,6 @@ h6 {
     color: #292d2d;
 }
 
-
-/* .container.v-container {
-  min-height: 500px;
-} */
-
 .navbar {
     /* background-color: #f65c78 !important; */
     background-color: #292d2d !important;
@@ -83,7 +78,7 @@ h6 {
 
 .fa-clock,
 .bg-green {
-    color: #c3f584;
+    color: #639227;
     font-size: 1.3em;
 }
 
@@ -124,13 +119,11 @@ h6 {
 footer {
     max-width: 100%;
     background-color: #292d2d;
-    /* font-family: remachine_script_personal_uRg; */
 }
 
 .copyright {
     display: flex;
     justify-content: center;
-    /* background-color: var(--oscuro); */
     margin: 0 0 0 0;
     text-align: center;
     padding: 1rem;
@@ -154,3 +147,4 @@ footer {
     margin-right: 10px;
     transform: scale(1.1);
 }
+/*#639425*/

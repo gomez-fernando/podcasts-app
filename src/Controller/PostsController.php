@@ -44,7 +44,7 @@ class PostsController extends AbstractController
             $audioFile = $form->get('audio')->getData();
             if ($audioFile) {
 
-                $original = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME)
+                $original = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
                 // this is needed to safely include the file name as part of the URL
                 $safeFilename =  filter_var ( $original, FILTER_SANITIZE_STRING);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$audioFile->guessExtension();
@@ -97,8 +97,8 @@ class PostsController extends AbstractController
             $brochureFile = $form->get('foto')->getData();
             if ($brochureFile) {
                 $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $dt = new DateTime();
-                $df = date_format($dt, 'Y-m-d-H-i-s');
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename =  filter_var ( $originalFilename, FILTER_SANITIZE_STRING);
                 $newFilename = $originalFilename . '-' . uniqid() . '.' . $brochureFile->guessExtension();
                 try {
                     $brochureFile->move(
@@ -114,9 +114,9 @@ class PostsController extends AbstractController
             $audioFile = $form->get('audio')->getData();
             if ($audioFile) {
                 $originalFilename = pathinfo($audioFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $dt = new DateTime();
-                $df = date_format($dt, 'Y-m-d-H-i-s');
-                $newFilename = $originalFilename . '-' . $df . uniqid() . '.' . $audioFile->guessExtension();
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename =  filter_var ( $originalFilename, FILTER_SANITIZE_STRING);
+                $newFilename = $originalFilename . '-' . uniqid() . '.' . $audioFile->guessExtension();
 
                 try {
                     $audioFile->move(
