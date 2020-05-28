@@ -33,7 +33,6 @@ class DashboardController extends AbstractController
                 $request->query->getInt('page', 1), /*page number*/
                 4 /*limit per page*/
             );
-//            dd($pagination);
 
             $count =($pagination->count());
             return $this->render('dashboard/index.html.twig', [

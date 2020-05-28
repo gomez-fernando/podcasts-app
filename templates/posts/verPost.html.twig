@@ -1,17 +1,15 @@
 {% extends 'base.html.twig' %}
-{% block title %}Podcast: {{ post.titulo }}
+{% block title %}Podcast:
+	{{ post.titulo }}
 {% endblock %}
 {% block body %}
 	<div class="container col-md-10 offset-md-1 col-lg-8 offset-lg-2 bg-white rounded my-3 p-4">
 		<div class="row d-flex justify-content-between">
-{#				<span class="p-2 flex-grow-1 bd-highlight">#}
-					<span class="mx-3 font-weight-bold">{{post.titulo}}</span>
-					<span class="mx-3" style="color:#c3f584;">
-{#						<i class="far fa-clock"></i>#}
-						Fecha de publicación:
-							{{ post.fechapublicacion | date('d-m-Y') }}
-{#					</span>#}
-					</span>
+			<span class="mx-3 font-weight-bold">{{post.titulo}}</span>
+			<span class="mx-3" style="color:#c3f584;">
+				Fecha de publicación:
+				{{ post.fechapublicacion | date('d-m-Y') }}
+			</span>
 		</div>
 		<hr>
 
@@ -26,16 +24,13 @@
 		<hr>
 
 
-
 		<div class="row justify-content-center">
-					<div class="p-2 bd-highlight my-3">
-						<div class="align-self-center">
-							<img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
-						</div>
-					</div>
+			<div class="p-2 bd-highlight my-3">
+				<div class="align-self-center">
+					<img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
 				</div>
-
-
+			</div>
+		</div>
 
 
 		<div class="row justify-content-center">
@@ -48,7 +43,8 @@
 		</div>
 		<a href="{{ path('editar_podcast', {'id':post.id}) }}" class="btn btn-sm btn-outline-success mr-3">Editar</a>
 		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-{{post.id}}"> Borrar
+		<button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-{{post.id}}">
+			Borrar
 		</button>
 		<!-- Modal -->
 		<div class="modal fade" id="modal-{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -67,22 +63,11 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						{# <button type="button" class="btn btn-primary">Save changes</button> #}
 						<a class="btn btn-danger ml-5" href="{{ path('eliminar_podcast', {'id':post.id}) }}">Borrar podcast</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		</div>
 	</div>
-
-
-
-	{% endblock %}
-{#	{% block javascripts %}#}
-{#		{{ parent() }}#}
-{#		<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>#}
-{#		<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>#}
-{#		<script src="{{ asset('js/ajax-call.js') }}"></script>#}
-{#	{% endblock %}#}
+</div>{% endblock %}

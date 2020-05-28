@@ -10,34 +10,34 @@
 		<div class="row justify-content-center">
 			<div class="col-md-10 col-lg-8 cursor">
 				{% if count == 0 %}
-				<div class="bg-white rounded p-3 my-3 text-center">
+					<div class="bg-white rounded p-3 my-3 text-center">
 
-				<span class="signikabold">Tu lista de podcasts está vacía, por ahora.</span>
-					
-					<figure class="mt-3">
-						<img class="img-fluid" src="{{ asset('img/podcast.png') }}" alt="">
-					</figure>
-				</div>
-					{% else %}
-						{% for post in pagination %}
-							<div class="bg-white rounded p-3 my-3" onclick="window.location.href='{{ path('verPost',{id:post.id}) }}'">
-								<div class="d-flex bd-highlight">
-									<div class="p-2 flex-grow-1 bd-highlight">
-										<h3>{{post.titulo}}</h3>
-										<div class=" bg-green">
-											<i class="far fa-clock"></i>
-											<strong>Fecha de publicación:
-												{{ post.fecha_publicacion | date('d-m-Y') }}</strong>
-										</div>
+						<span class="signikabold">Tu lista de podcasts está vacía, por ahora.</span>
+
+						<figure class="mt-3">
+							<img class="img-fluid" src="{{ asset('img/podcast.png') }}" alt="">
+						</figure>
+					</div>
+				{% else %}
+					{% for post in pagination %}
+						<div class="bg-white rounded p-3 my-3" onclick="window.location.href='{{ path('verPost',{id:post.id}) }}'">
+							<div class="d-flex bd-highlight">
+								<div class="p-2 flex-grow-1 bd-highlight">
+									<h3>{{post.titulo}}</h3>
+									<div class=" bg-green">
+										<i class="far fa-clock"></i>
+										<strong>Fecha de publicación:
+											{{ post.fecha_publicacion | date('d-m-Y') }}</strong>
 									</div>
-									<div class="p-2 bd-highlight">
-										<div class="align-self-center">
-											<img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
-										</div>
+								</div>
+								<div class="p-2 bd-highlight">
+									<div class="align-self-center">
+										<img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
 									</div>
 								</div>
 							</div>
-						{% endfor %}
+						</div>
+					{% endfor %}
 				{% endif %}
 
 			</div>

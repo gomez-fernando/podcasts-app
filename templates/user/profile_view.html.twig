@@ -5,64 +5,58 @@
 
 {% block body %}
 
-    <div class="example-wrapper col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-    <div class="bg-white rounded p-3 my-3">
+	<div class="example-wrapper col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+		<div class="bg-white rounded p-3 my-3">
 
-    <h1 class="mt-2">Editar perfil</h1>
-        <form action="{{ path('editarPerfil') }}" method="POST">
-            <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" value="{{ user.getNombre }}" class="form-control" id="name" aria-describedby="name" name="_name"
-                       required>
-            </div>
-            <div class="form-group">
-                <label for="surname">Apellidos</label>
-                <input type="text" value="{{ user.getApellidos() }}" class="form-control" id="surname" aria-describedby="surname"
-                       name="_surname" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" value="{{ app.user.email }}" class="form-control" id="email" aria-describedby="emailHelp"
-                       name="_email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" value="" class="form-control" id="password" aria-describedby="password" name="_password">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary mr-5 mb-3">Guardar cambios</button>
-                {# <a class="btn btn-danger ml-5" href="{{ path('user_delete') }}">Darse de baja</a> #}
+			<h1 class="mt-2">Editar perfil</h1>
+			<form action="{{ path('editarPerfil') }}" method="POST">
+				<div class="form-group">
+					<label for="name">Nombre</label>
+					<input type="text" value="{{ user.getNombre }}" class="form-control" id="name" aria-describedby="name" name="_name" required>
+				</div>
+				<div class="form-group">
+					<label for="surname">Apellidos</label>
+					<input type="text" value="{{ user.getApellidos() }}" class="form-control" id="surname" aria-describedby="surname" name="_surname" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" value="{{ app.user.email }}" class="form-control" id="email" aria-describedby="emailHelp" name="_email" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" value="" class="form-control" id="password" aria-describedby="password" name="_password">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary mr-5 mb-3">Guardar cambios</button>
 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal">
-                    Darme de baja
-                </button>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Confirmación necesaria</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Se eliminará definitivamente su cuenta y todos los datos asociados a la misma.
-                            ¿Desea continuar?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            {# <button type="button" class="btn btn-primary">Save changes</button> #}
-                            <a class="btn btn-danger ml-5" href="{{ path('eliminar_usuario') }}">Darme de baja</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal">
+						Darme de baja
+					</button>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Confirmación necesaria</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Se eliminará definitivamente su cuenta y todos los datos asociados a la misma.
+																                            ¿Desea continuar?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+								<a class="btn btn-danger ml-5" href="{{ path('eliminar_usuario') }}">Darme de baja</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 
-    </div>
-    </div>
+		</div>
+	</div>
 {% endblock %}

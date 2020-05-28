@@ -38,11 +38,9 @@ class PostsType extends AbstractType
                     'required' => true
                 ]
             )
-            // ->add('fecha_publicacion')
             ->add('descripcion', TextareaType::class, array(
                 'label' => 'Descripción'
             ))
-            // ->add('user')
             ->add('submit', SubmitType::class, array(
                 'label' => 'Guardar'
             ));

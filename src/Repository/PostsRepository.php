@@ -29,37 +29,5 @@ class PostsRepository extends ServiceEntityRepository
                         FROM App:Posts post 
                         WHERE post.user = user
                     ');
-        //                        SELECT post.id, post.titulo, post.foto, post.audio, post.fecha_publicacion, user.nombre
-        //                        JOIN post.user user
-
     }
-
-    // /**
-    //  * @return Posts[] Returns an array of Posts objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Posts
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
