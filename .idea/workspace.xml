@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f153404c-26fb-4f34-ac9a-ea6717067fe6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/podcasts2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/posts/editar_view.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/podcasts1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/podcasts1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CopiaPosts--Repository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/posts/editar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/BORRAReditar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/profile_view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/profile_view.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/verPost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/verPost.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,10 +151,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/user" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\podcasts-app\templates\posts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\podcasts-app\templates\user" />
       <recent name="C:\xampp\htdocs\podcasts-app\src\Repository" />
     </key>
   </component>
@@ -167,7 +174,7 @@
       <updated>1590653367566</updated>
       <workItem from="1590653369170" duration="5965000" />
       <workItem from="1590669491703" duration="20094000" />
-      <workItem from="1590693630978" duration="6169000" />
+      <workItem from="1590693630978" duration="17893000" />
     </task>
     <servers />
   </component>
@@ -178,10 +185,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590707107080">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590707446533">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1590707107080" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1590707446533" />
     <state x="465" y="178" key="NewPhpClassDialog" timestamp="1590685357927">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
