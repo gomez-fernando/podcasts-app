@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar podcast {{ post.titulo }}
+{% endblock %}
+
+{% block body %}
+
+	<div class="example-wrapper col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+		<div class="bg-white rounded p-3 my-3">
+
+			<h1 class="mt-2">Editar podcast</h1>
+			<form enctype="multipart/form-data" action="{{ path('editarPodcast') }}" method="POST">
+				<input type="hidden" value="{{ post.id }}" name="_id" />
+				<div class="form-group">
+					<label for="titulo">Título</label>
+					<input type="text" value="{{ post.titulo }}" class="form-control" id="titulo" aria-describedby="titulo" name="_titulo">
+				</div>
+				<div class="form-group">
+					<label for="imagen">Imagen</label>
+					<input type="file" value="{{ post.foto }}" class="form-control" id="imagen" aria-describedby="imagen" name="_foto" >
+				</div>
+				<div class="form-group">
+					<label for="audio">Audio</label>
+					<input type="file" value="{{ post.audio }}" class="form-control" id="audio" aria-describedby="emailHelp" name="_audio" >
+				</div>
+				<div class="form-group">
+					<label for="descripcion">Descripción</label>
+					<textarea name="_descripcion" id="descripcion" class="form-control" aria-describedby="descripcion" cols="30" rows="3">{{ post.descripcion }}</textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit"  class="btn btn-primary mr-3 my-2">Guardar cambios</button>
+{#					<a href="{{ path('editarPodcast', {'id':post.id}) }}">Guardar cambios</a>#}
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-danger my-2" data-toggle="modal" data-target="#modal-{{post.id}}">
+						Borrar podcast
+					</button>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Confirmación necesaria</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								Se eliminará definitivamente su cuenta y todos los datos asociados a la misma.
+																                            ¿Desea continuar?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+								<a class="btn btn-danger ml-5" href="{{ path('eliminar_podcast', {'id':post.id}) }}">Borrar podcast</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+{% endblock %}

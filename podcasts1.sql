@@ -31,8 +31,8 @@ CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `titulo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `foto` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `audio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `audio` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fecha_publicacion` datetime NOT NULL,
   `descripcion` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

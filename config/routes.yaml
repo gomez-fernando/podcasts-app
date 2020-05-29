@@ -5,3 +5,7 @@ editar_podcast:
 eliminar_podcast:
   path: /borrar-podcast/{id}
   controller: App\Controller\PostsController::delete
+
+editarPodcast:
+  path: /editar-podcast
+  controller: App\Controller\PostsController::editarPodcast
