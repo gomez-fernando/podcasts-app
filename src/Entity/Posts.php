@@ -27,7 +27,7 @@ class Posts
     private $foto;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $audio;
 
@@ -37,7 +37,7 @@ class Posts
     public $fecha_publicacion;
 
     /**
-     * @ORM\Column(type="string", length=80000)
+     * @ORM\Column(type="string", length=80000, nullable=true)
      */
     private $descripcion;
 
